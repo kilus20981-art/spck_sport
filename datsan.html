@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datsan</title>
+    <link rel="stylesheet" href="./css/datsan.css" />
+    <link rel="stylesheet" href="./css/cart.css">
+  </head>
+  <body>
+       <!--Navbar-->
+    <nav class="navbar">
+      <div class="logo">BADMINTON</div>
+
+      <ul class="nav-menu">
+        <li><a href="./index.html">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href=".">Sản phẩm</a>
+          <ul class="dropdown-menu">
+            <li><a href="./lining.html">Vợt Lining</a></li>
+            <li><a href="./phukien.html">Phụ kiện</a></li>
+        
+          </ul>
+        </li>
+
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./datsan.html">Đặt sân</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
+        <li id="loginMenu">
+    <a href="./login.html">Đăng xuất</a>
+</li>
+        <li><a href="./profile.html">Tài khoản</a></li>
+        <li>
+    <a href="./cart.html" id="cartIcon">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    </a>
+</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <img
+        src="./image/dau-moi-la-san-cau-long-binh-tan-uy-tin-chat-luong-cap-nhat-moi-nhat-2020-2-1738979214.webp"
+        alt=""
+      />
+      <img src="./image/xancaulong.webp" alt="" />
+    </div>
+
+
+
+    <section class="court-section">
+
+  <div class="section-title">
+    <h2>So sánh hai loại sân cầu lông</h2>
+    <p>
+      Chúng tôi cung cấp hai loại mặt sân phổ biến: sân xanh chuyên thi đấu và sân xám đa năng.
+      Mỗi loại có ưu điểm và nhược điểm riêng phù hợp với từng nhu cầu tập luyện và thi đấu.
+    </p>
+  </div>
+
+  
+
+  <div class="court-container">
+
+    <!-- SÂN XÁM -->
+<div class="court-card">
+    <h2>Sân xám đa năng</h2>
+    <p><b>Ưu điểm:</b> Giá thuê hợp lý, bề mặt bền, phù hợp tập luyện hằng ngày.</p>
+    <p><b>Nhược điểm:</b> Độ bám và độ êm không cao bằng sân chuyên thi đấu.</p>
+
+    <div class="book-btn">
+                <a href="./samxam.html"><button>Đặt sân</button></a>        
+    </div>
+</div>
+
+    <!-- SÂN XANH -->
+    <div class="court-card">
+        <h2>Sân xanh chuyên thi đấu</h2>
+        <p><strong>Ưu điểm:</strong> Độ bám tốt, êm chân, đạt tiêu chuẩn thi đấu chuyên nghiệp.</p>
+        <p><strong>Nhược điểm:</strong> Giá thuê cao hơn so với sân đa năng.</p>
+        
+      <div class="book-btn">
+                <a href="./sanxanh.html"><button>Đặt sân</button></a>    
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3>Sân Cầu Lông ABC</h3>
+      <p>Chuyên cung cấp sân đạt chuẩn và dụng cụ cầu lông chính hãng.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Nguyễn Văn A, TP.HCM</p>
+      <p>📞 0909 123 456</p>
+      <p>✉️ abc@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Đặt sân</a></li>
+        <li><a href="#">Bảng giá</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Sân Cầu Lông ABC. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="./js/datsan.js"></script>
+<link rel="stylesheet" href="./css/cart.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js" integrity="sha512-gCJuoyvPlJMaTPkYPfyfEt1KYPvoEE9PgGHlOU+Qtg+kLbBfEbiiim4PDj2ATWLc6BN0irZnNbdgzCtX53vjXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js" integrity="sha512-Xxpv+NpwNyir+77oEME5XeixRoRLrI4eY0bBZSMHgWLEFbc0f+JP4Nax3t/qDuYg1hgWrSl8pUapb+AO5Lp1jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-storage-compat.min.js" integrity="sha512-l/ieVoEShBQI9lKOdMY4AAV9rzEE5YHKF8XB4m3Qn3DtK9AhYSOgyDWrL2XH1lhKS4Fde+PNoDiBoT7UhcP23A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js" integrity="sha512-PgwIBKz/MWPvQvKq7MUWB5x5aCyiiXTnAtbUGqbBvylcD/oASXh8wap5g1lWpzPmNraLXWzuWx8bkZ+reKYoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/firebase.js"></script>
+  </body>
+</html>
+
+

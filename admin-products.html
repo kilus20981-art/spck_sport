@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quản lý sản phẩm | Badminton</title>
+
+    <!-- CSS giao diện Admin -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body hidden>
+
+    <!-- THANH MENU BÊN TRÁI -->
+    <aside class="sidebar">
+        <h2>🏸 BADMINTON</h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <a href="./admin.html">
+            📊 Tổng quan
+        </a>
+
+        <a href="./admin-products.html" class="active">
+            🏸 Sản phẩm
+        </a>
+
+        <a href="./admin-orders.html">
+            📦 Đơn hàng
+        </a>
+
+        <a href="./admin-customers.html">
+            👥 Khách hàng
+        </a>
+
+        <a href="../index.html" class="back">
+            ← Về cửa hàng
+        </a>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-content">
+
+        <!-- THANH TIÊU ĐỀ -->
+        <header class="topbar">
+            <div>
+                <h1>Quản lý sản phẩm</h1>
+                <p>Chào mừng đến trang quản trị Badminton!</p>
+                <p id="adminEmail"></p>
+            </div>
+
+            <button id="logoutBtn">
+                Đăng xuất
+            </button>
+        </header>
+
+        <!-- FORM THÊM VÀ SỬA SẢN PHẨM -->
+        <section class="panel">
+            <h2>🏸 Thêm sản phẩm</h2>
+
+            <p>
+                Thêm sản phẩm vào hoặc chỉnh sửa sản phẩm đang có.
+            </p>
+
+            <form id="productForm">
+
+                <!-- Tên sản phẩm -->
+                <input
+                    id="productName"
+                    placeholder="Tên sản phẩm"
+                    required
+                >
+
+                <!-- Giá sản phẩm -->
+                <input
+                    id="productPrice"
+                    type="number"
+                    min="0"
+                    step="1"
+                    placeholder="Giá tiền (VNĐ)"
+                    required
+                >
+
+                <!-- Đường dẫn hình ảnh -->
+                <input
+                    id="productImage"
+                    type="url"
+                    placeholder="Link hình ảnh"
+                    required
+                >
+
+                <!-- Nút thêm hoặc lưu thay đổi -->
+                <button id="saveProductBtn" type="submit">
+                    Thêm sản phẩm
+                </button>
+
+                <!-- Nút hủy khi đang sửa -->
+                <button id="cancelEditBtn" type="button" hidden>
+                    Hủy sửa
+                </button>
+
+            </form>
+
+            <!-- Thông báo kết quả -->
+            <p id="productMessage" role="status"></p>
+        </section>
+
+        <!-- DANH SÁCH SẢN PHẨM -->
+        <section class="panel">
+            <h2>Danh sách sản phẩm</h2>
+
+           
+
+            <!-- JavaScript hiển thị danh sách tại đây -->
+            <div id="productList">
+                Đang tải sản phẩm...
+            </div>
+        </section>
+
+    </main>
+
+    <!-- THƯ VIỆN FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- CẤU HÌNH FIREBASE -->
+    <script src="../js/firebase.js"></script>
+
+    <!-- KIỂM TRA QUYỀN ADMIN -->
+    <script src="./admin-auth.js"></script>
+
+    <!-- XỬ LÝ THÊM, SỬA VÀ HIỂN THỊ SẢN PHẨM -->
+    <script src="./admin-products.js"></script>
+
+</body>
+</html>

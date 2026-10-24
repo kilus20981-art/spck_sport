@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   TRANG LOGIN
+========================= */
+
+.login-form {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+
+    /* Nền gradient */
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #eef1f8
+    );
+
+    padding: 30px;
+
+    justify-content: center;
+    display: grid;
+
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+
+    /* Không cho hiệu ứng tràn ra ngoài */
+    overflow: hidden;
+}
+
+
+/* =========================
+   HIỆU ỨNG VÒNG TRÒN NỀN
+========================= */
+
+.login-form::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    top: -100px;
+    left: -100px;
+
+    z-index: -1;
+}
+
+.login-form::after {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    bottom: -100px;
+    right: -70px;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   TIÊU ĐỀ LOGIN
+========================= */
+
+.login-form h1 {
+    text-align: center;
+
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    color: #fefefe;
+
+    font-family: 'Poppins', sans-serif;
+
+    /* Hiệu ứng xuất hiện */
+    animation: titleShow 0.8s ease;
+}
+
+.login-form h2 {
+    margin-bottom: 5px;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    color: #000;
+
+    text-align: center;
+
+    animation: titleShow 0.8s ease;
+}
+
+
+/* =========================
+   ANIMATION TIÊU ĐỀ
+========================= */
+
+@keyframes titleShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   MAIN LOGIN
+========================= */
+
+.login-form .main {
+    position: relative;
+
+    display: flex;
+
+    margin: 30px 0;
+
+    /* Hiệu ứng xuất hiện */
+    animation: boxShow 0.8s ease;
+}
+
+
+/* =========================
+   ANIMATION KHUNG LOGIN
+========================= */
+
+@keyframes boxShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================
+   KHUNG FORM BÊN TRÁI
+========================= */
+
+.content {
+    flex-basis: 50%;
+
+    padding: 3em;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+
+    transition: 0.4s ease;
+}
+
+
+/* Khi rê chuột vào form */
+
+.content:hover {
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================
+   KHUNG VIDEO BÊN PHẢI
+========================= */
+
+.form-img {
+    flex-basis: 55%;
+    height: 600px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #dfe5ea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.form-img video {
+    width: 150%;
+    height: 200px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    filter: brightness(0.9) contrast(1.05);
+
+    transform: scale(1.02);
+
+    transition: transform 0.6s ease;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #000;
+
+    font-size: 16px;
+
+    line-height: 25px;
+
+    opacity: 0.6;
+
+    text-align: center;
+}
+
+
+/* =========================
+   INPUT + BUTTON
+========================= */
+
+.btn,
+button,
+input {
+    border-radius: 35px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.login-form form {
+    margin: 30px 0;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.login-form input {
+    outline: none;
+
+    margin-bottom: 15px;
+
+    color: #000;
+
+    text-align: left;
+
+    padding: 14px 20px;
+
+    width: 100%;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+
+    background: #edf3fc;
+
+    transition:
+        0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Khi click vào ô nhập */
+
+.login-form input:focus {
+
+    background: #fff;
+
+    border: 2px solid #070808;
+
+    box-shadow:
+        0 0 12px rgba(95, 140, 159, 0.3);
+
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.login-form input::placeholder {
+    color: #777;
+
+    transition: 0.3s;
+}
+
+
+/* Khi click input */
+
+.login-form input:focus::placeholder {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   BUTTON LOGIN
+========================= */
+
+.login-form button {
+
+    font-size: 18px;
+
+    color: #fff;
+
+    width: 100%;
+
+    background: #000;
+
+    border: none;
+
+    padding: 14px 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover button */
+
+.login-form button:hover {
+
+    color: #fff;
+
+    background: #252525;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Khi bấm button */
+
+.login-form button:active {
+
+    transform: scale(0.97);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+a {
+    text-decoration: none;
+}
+
+
+/* Link trong p */
+
+p a {
+    color: #000;
+
+    transition: 0.3s ease;
+}
+
+
+p a:hover {
+
+    color: #5f8c9f;
+
+    text-decoration: underline;
+}
+
+
+/* Link trong button */
+
+button a {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE - ĐIỆN THOẠI
+========================= */
+
+@media(max-width:736px) {
+
+    .login-form {
+        padding: 20px;
+    }
+
+
+    .login-form h1 {
+        font-size: 2rem;
+    }
+
+
+    .login-form h2 {
+        font-size: 26px;
+    }
+
+
+    .login-form .main {
+
+        flex-direction: column;
+
+        margin: 20px 0;
+    }
+
+
+    .login-form form {
+
+        margin-top: 30px;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* Ảnh */
+
+    .form-img {
+
+        border-radius: 0;
+
+        border-bottom-left-radius: 12px;
+
+        border-bottom-right-radius: 12px;
+
+        order: 2;
+    }
+
+
+    .form-img img {
+
+        height: 300px;
+    }
+
+
+    /* Form */
+
+    .content {
+
+        order: 1;
+
+        border-radius: 0;
+
+        border-top-left-radius: 12px;
+
+        border-top-right-radius: 12px;
+
+        padding: 2em;
+    }
+
+}
+
+.video-title {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.video-title span {
+    display: block;
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.video-title p {
+    margin-top: 5px;
+    color:#000 ;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+

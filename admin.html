@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quản lý cửa hàng | Badminton</title>
+
+    <!-- CSS giao diện Admin -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body hidden>
+
+    <!-- THANH MENU BÊN TRÁI -->
+    <aside class="sidebar">
+        <h2>🏸 BADMINTON</h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <a href="./admin.html" class="active">
+            📊 Tổng quan
+        </a>
+
+        <a href="./admin-products.html">
+            🏸 Sản phẩm
+        </a>
+
+        <a href="./admin-orders.html">
+            📦 Đơn hàng
+        </a>
+
+        <a href="./admin-customers.html">
+            👥 Khách hàng
+        </a>
+
+        <a href="../index.html" class="back">
+            ← Về cửa hàng
+        </a>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-content">
+
+        <!-- THANH TIÊU ĐỀ -->
+        <header class="topbar">
+            <div>
+                <h1>Quản lý cửa hàng</h1>
+                <p>Chào mừng đến trang quản trị Badminton!</p>
+                <p id="adminEmail"></p>
+            </div>
+
+            <button id="logoutBtn">
+                Đăng xuất
+            </button>
+        </header>
+
+        <!-- KHU VỰC TỔNG QUAN -->
+        <section id="dashboard">
+            <h2>Tổng quan</h2>
+
+            <div class="stats">
+
+                <!-- SỐ LƯỢNG SẢN PHẨM -->
+                <div class="stat-card">
+                    <span>🏸</span>
+                    <p>Sản phẩm</p>
+                    <h3 id="productCount">0</h3>
+                </div>
+
+                <!-- SỐ LƯỢNG ĐƠN HÀNG -->
+                <div class="stat-card">
+                    <span>📦</span>
+                    <p>Đơn hàng</p>
+                    <h3 id="orderCount">0</h3>
+                </div>
+
+                <!-- SỐ LƯỢNG KHÁCH HÀNG -->
+                <div class="stat-card">
+                    <span>👥</span>
+                    <p>Khách hàng</p>
+                    <h3 id="customerCount">0</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CÁC CHỨC NĂNG QUẢN LÝ -->
+        <section class="panel">
+            <h2>Chức năng quản lý</h2>
+
+            <p>
+                Chọn một mục để mở trang quản lý riêng.
+            </p>
+
+            <div class="quick-links">
+
+                <a href="./admin-products.html">
+                    🏸 Quản lý sản phẩm
+                </a>
+
+                <a href="./admin-orders.html">
+                    📦 Quản lý đơn hàng
+                </a>
+
+                <a href="./admin-customers.html">
+                    👥 Quản lý khách hàng
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- THƯ VIỆN FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- CẤU HÌNH FIREBASE -->
+    <script src="../js/firebase.js"></script>
+
+    <!-- KIỂM TRA ĐĂNG NHẬP VÀ QUYỀN ADMIN -->
+    <script src="./admin-auth.js"></script>
+
+    <!-- XỬ LÝ SỐ LIỆU TỔNG QUAN -->
+    <script src="./admin-dashboard.js"></script>
+
+</body>
+</html>

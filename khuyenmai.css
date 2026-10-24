@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5f8c9f;
+    padding: 0 30px;
+    height: 70px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: block;
+}
+
+.nav-menu li a:hover {
+    background-color: #66a3be;
+    border-radius: 6px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5a8ca1;
+    list-style: none;
+    min-width: 180px;
+    display: none;
+}
+
+.dropdown-menu li a {
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.content {
+    color: #000000;
+    
+
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5f8c9f;
+    padding: 0 30px;
+    height: 70px;
+}
+
+.content{
+color: #5a8ca1;
+
+}
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto; 
+}
+
+
+
+.slider{
+    width:95%;
+    height:500px;
+    margin:30px auto;
+
+    position:relative;
+    overflow:hidden;
+
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    transition:0.5s ease;
+}
+
+
+.slide.active{
+    opacity:1;
+}
+
+
+.slider img{
+    display:block;
+}
+
+.footer {
+  background-color: #5f8f9f;
+  color: #ffffff;
+  padding: 40px 20px 10px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h3, 
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #5f8f9f;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   PHẦN KHUYẾN MÃI
+   Thêm vào cuối file khuyenmai.css
+========================================================= */
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-section {
+    width: 90%;
+    margin: 40px auto;
+    padding: 35px 20px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.countdown-section h2 {
+    color: #5f8c9f;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.countdown-section p {
+    color: #777;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Các ô thời gian */
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.time-box {
+    width: 85px;
+    height: 85px;
+
+    background: #5f8c9f;
+
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0 5px 12px rgba(95, 140, 159, 0.25);
+
+    transition: 0.3s;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+
+    background: #4e7d90;
+}
+
+.time-box span {
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.time-box small {
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+/* ================= TIÊU ĐỀ SECTION ================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #e63946;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.section-title h2 {
+    color: #5f8c9f;
+
+    font-size: 30px;
+
+    margin: 5px 0;
+}
+
+.section-title p {
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* ================= DEAL HOT ================= */
+
+.deal-section {
+    width: 90%;
+
+    margin: 50px auto;
+}
+
+.deal-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Card sản phẩm */
+
+.deal-card {
+    position: relative;
+
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.deal-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Nhãn giảm giá */
+
+.discount {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 5;
+
+    background: #e63946;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* Ảnh sản phẩm */
+
+.deal-img {
+    height: 260px;
+
+    background: #f7f9fa;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.deal-img img {
+    width: 85%;
+    height: 85%;
+
+    object-fit: contain;
+
+    transition: 0.4s;
+}
+
+.deal-card:hover .deal-img img {
+    transform: scale(1.08);
+}
+
+
+/* Icon tạm cho sản phẩm chưa có ảnh */
+
+.racket-icon {
+    font-size: 90px;
+}
+
+
+/* Thông tin sản phẩm */
+
+.deal-info {
+    padding: 20px;
+}
+
+.deal-info h3 {
+    color: #333;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Sao */
+
+.stars {
+    color: #f5a623;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Giá cũ */
+
+.old-price {
+    color: #999;
+
+    font-size: 14px;
+
+    text-decoration: line-through;
+
+    margin: 0;
+}
+
+
+/* Giá mới */
+
+.new-price {
+    color: #e63946;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin: 3px 0 15px;
+}
+
+
+/* Nút xem sản phẩm */
+
+.buy-btn {
+    display: block;
+
+    text-align: center;
+
+    background: #5f8c9f;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #416f81;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= VOUCHER ================= */
+
+.voucher-section {
+    width: 90%;
+
+    margin: 60px auto;
+}
+
+.voucher-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Voucher */
+
+.voucher-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.voucher-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Icon */
+
+.voucher-icon {
+    font-size: 35px;
+}
+
+
+/* Nội dung */
+
+.voucher-info {
+    flex: 1;
+}
+
+.voucher-info h3 {
+    color: #5f8c9f;
+
+    font-size: 17px;
+}
+
+.voucher-info p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin: 3px 0;
+}
+
+.voucher-info strong {
+    color: #e63946;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Nút sao chép */
+
+.voucher-card button {
+    border: none;
+
+    background: #5f8c9f;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.voucher-card button:hover {
+    background: #416f81;
+}
+
+
+/* ================= COMBO ================= */
+
+.combo-section {
+    width: 90%;
+
+    margin: 60px auto;
+
+    padding: 45px 60px;
+
+    background: linear-gradient(
+        120deg,
+        #eaf2f5,
+        #ffffff
+    );
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Nội dung combo */
+
+.combo-content > span {
+    color: #e63946;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.combo-content h2 {
+    color: #5f8c9f;
+
+    font-size: 35px;
+
+    margin: 8px 0;
+}
+
+.combo-content p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* Giá combo */
+
+.combo-price {
+    margin: 15px 0;
+}
+
+.combo-price span {
+    color: #999;
+
+    text-decoration: line-through;
+
+    margin-right: 10px;
+}
+
+.combo-price strong {
+    color: #e63946;
+
+    font-size: 28px;
+}
+
+
+/* Nút combo */
+
+.combo-btn {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    background: #5f8c9f;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.combo-btn:hover {
+    background: #416f81;
+
+    transform: translateY(-2px);
+}
+
+
+/* Badge combo */
+
+.combo-badge {
+    width: 180px;
+    height: 180px;
+
+    background: #e63946;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform: rotate(8deg);
+
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.25);
+}
+
+.combo-badge span {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.combo-badge strong {
+    font-size: 48px;
+
+    line-height: 1;
+}
+
+.combo-badge small {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .deal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .voucher-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .combo-section {
+        padding: 35px;
+    }
+
+}
+
+
+/* Điện thoại */
+
+@media (max-width: 600px) {
+
+    .countdown {
+        gap: 7px;
+    }
+
+    .time-box {
+        width: 65px;
+        height: 70px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .deal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .combo-section {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .combo-badge {
+        width: 140px;
+        height: 140px;
+    }
+
+    .combo-badge strong {
+        font-size: 38px;
+    }
+
+    .voucher-card {
+        flex-wrap: wrap;
+    }
+
+}

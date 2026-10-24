@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>khuyen mai</title>
+    <link rel="stylesheet" href="./css/khuyenmai.css" />
+    <link rel="stylesheet" href="./css/cart.css">
+
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="logo">BADMINTON</div>
+
+      <ul class="nav-menu">
+        <li><a href="./index.html">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href=".">Sản phẩm</a>
+          <ul class="dropdown-menu">
+            <li><a href="./lining.html">Vợt Lining</a></li>
+            <li><a href="./phukien.html">Phụ kiện</a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./datsan.html">Đặt sân</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
+
+        <li id="loginMenu">
+        <a class="login" onclick="logout()">Đăng xuất</a>
+</li>
+        <li><a href="./profile.html">Tài khoản</a></li>
+        <li>
+    <a href="./cart.html" id="cartIcon">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    </a>
+</li>
+      </ul>
+    </nav>
+
+
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown-section">
+
+    <h2>🔥 DEAL HOT HÔM NAY 🔥</h2>
+
+    <p>
+        Ưu đãi đặc biệt - Số lượng có hạn
+    </p>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Ngày</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Giờ</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Phút</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Giây</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DEAL HOT ================= -->
+
+<section class="deal-section">
+
+    <div class="section-title">
+
+        <span>⚡ DEAL HOT</span>
+
+        <h2>Sản phẩm đang giảm giá</h2>
+
+        <p>
+            Những sản phẩm đang có mức giá cực tốt
+        </p>
+
+    </div>
+
+
+    <div class="deal-grid">
+
+        <!-- SẢN PHẨM 1 -->
+
+        <div class="deal-card">
+
+            <div class="discount">
+                -20%
+            </div>
+
+            <div class="deal-img">
+                <img
+                    src="./image/Ảnh chụp màn hình 2026-02-10 154626.png"
+                    alt="Lining Axforce 80 Light"
+                >
+            </div>
+
+            <div class="deal-info">
+
+                <h3>Lining Axforce 80 Light</h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="old-price">
+                    4.690.000 ₫
+                </p>
+
+                <p class="new-price">
+                    3.752.000 ₫
+                </p>
+
+                <a href="./lining1.html" class="buy-btn">
+                    XEM SẢN PHẨM
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SẢN PHẨM 2 -->
+
+        <div class="deal-card">
+
+            <div class="discount">
+                -25%
+            </div>
+
+              <div class="deal-img">
+                <img
+                    src="./image/Ảnh chụp màn hình 2026-02-10 154820.png"
+                    alt="Lining Halbertec 4000"
+                >
+            </div>
+
+            <div class="deal-info">
+
+                <h3>Lining Halbertec 4000</h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="old-price">
+                    2.070.000 ₫
+                </p>
+
+                <p class="new-price">
+                    1.552.500 ₫
+                </p>
+
+                <a href="./lining2.html" class="buy-btn">
+                    XEM SẢN PHẨM
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SẢN PHẨM 3 -->
+
+        <div class="deal-card">
+
+            <div class="discount">
+                -30%
+            </div>
+
+             <div class="deal-img">
+                <img
+                    src="./image/Ảnh chụp màn hình 2026-09-26 153327.png   "
+                    alt="Yonex Astrox 01F"
+                >
+            </div>
+
+            <div class="deal-info">
+
+                <h3>Yonex Astrox 01F</h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="old-price">
+                    1.900.000 ₫
+                </p>
+
+                <p class="new-price">
+                    1.330.000 ₫
+                </p>
+
+                <a href="./yonex1.html" class="buy-btn">
+                    XEM SẢN PHẨM
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VOUCHER ================= -->
+
+<section class="voucher-section">
+
+    <div class="section-title">
+
+        <span>🎁 ƯU ĐÃI</span>
+
+        <h2>Voucher dành cho bạn</h2>
+
+        <p>
+            Sao chép mã và sử dụng khi thanh toán
+        </p>
+
+    </div>
+
+
+    <div class="voucher-grid">
+
+        <div class="voucher-card">
+
+            <div class="voucher-icon">
+                💰
+            </div>
+
+            <div class="voucher-info">
+
+                <h3>GIẢM 50K</h3>
+
+                <p>Đơn từ 500.000 ₫</p>
+
+                <strong>SALE50</strong>
+
+            </div>
+
+            <button onclick="copyCode('SALE50')">
+                SAO CHÉP
+            </button>
+
+        </div>
+
+
+        <div class="voucher-card">
+
+            <div class="voucher-icon">
+                🔥
+            </div>
+
+            <div class="voucher-info">
+
+                <h3>GIẢM 100K</h3>
+
+                <p>Đơn từ 1.000.000 ₫</p>
+
+                <strong>SALE100</strong>
+
+            </div>
+
+            <button onclick="copyCode('SALE100')">
+                SAO CHÉP
+            </button>
+
+        </div>
+
+
+        <div class="voucher-card">
+
+            <div class="voucher-icon">
+                🚚
+            </div>
+
+            <div class="voucher-info">
+
+                <h3>FREESHIP</h3>
+
+                <p>Đơn từ 700.000 ₫</p>
+
+                <strong>FREESHIP</strong>
+
+            </div>
+
+            <button onclick="copyCode('FREESHIP')">
+                SAO CHÉP
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMBO ================= -->
+
+<section class="combo-section">
+
+    <div class="combo-content">
+
+        <span>🏸 COMBO TIẾT KIỆM</span>
+
+        <h2>COMBO TÂN THỦ</h2>
+
+        <p>
+            Vợt + Cước + Quấn cán
+            <br>
+            Combo phù hợp cho người mới bắt đầu.
+        </p>
+
+        <div class="combo-price">
+
+            <span>3.000.000 ₫</span>
+
+            <strong>2.499.000 ₫</strong>
+
+        </div>
+
+        <a href="./lining.html" class="combo-btn">
+            XEM SẢN PHẨM
+        </a>
+
+    </div>
+
+
+    <div class="combo-badge">
+        <span>SALE</span>
+        <strong>17%</strong>
+        <small>OFF</small>
+    </div>
+
+</section>
+
+
+
+
+        <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3>Sân Cầu Lông ABC</h3>
+      <p>Chuyên cung cấp sân đạt chuẩn và dụng cụ cầu lông chính hãng.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Nguyễn Văn A, TP.HCM</p>
+      <p>📞 0909 123 456</p>
+      <p>✉️ abc@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Đặt sân</a></li>
+        <li><a href="#">Bảng giá</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© 2026 Sân Cầu Lông ABC. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script src="./js/khuyenmai.js"></script>
+
+  </body>
+</html>

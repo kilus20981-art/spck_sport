@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quản lý khách hàng | Badminton</title>
+
+    <!-- CSS trang quản trị -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body hidden>
+
+    <!-- THANH MENU BÊN TRÁI -->
+    <aside class="sidebar">
+
+        <h2>🏸 BADMINTON</h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <a href="./admin.html">
+            📊 Tổng quan
+        </a>
+
+        <a href="./admin-products.html">
+            🏸 Sản phẩm
+        </a>
+
+        <a href="./admin-orders.html">
+            📦 Đơn hàng
+        </a>
+
+        <a href="./admin-customers.html" class="active">
+            👥 Khách hàng
+        </a>
+
+        <a href="../index.html" class="back">
+            ← Về cửa hàng
+        </a>
+
+    </aside>
+
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-content">
+
+        <!-- THANH TRÊN CÙNG -->
+        <header class="topbar">
+
+            <div>
+                <h1>Quản lý khách hàng</h1>
+
+                <p>
+                    Chào mừng đến trang quản trị Badminton!
+                </p>
+
+                <p id="adminEmail"></p>
+            </div>
+
+            <button id="logoutBtn">
+                Đăng xuất
+            </button>
+
+        </header>
+
+
+        <!-- DANH SÁCH KHÁCH HÀNG -->
+        <section class="panel">
+
+            <h2>👥 Quản lý khách hàng</h2>
+
+          
+
+            <div id="customerList">
+           
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- THƯ VIỆN FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+
+    <!-- FILE CẤU HÌNH FIREBASE -->
+    <script src="../js/firebase.js"></script>
+
+    <!-- KIỂM TRA QUYỀN ADMIN -->
+    <script src="./admin-auth.js"></script>
+
+    <!-- XỬ LÝ QUẢN LÝ KHÁCH HÀNG -->
+    <script src="./admin-customers.js"></script>
+
+</body>
+
+</html>

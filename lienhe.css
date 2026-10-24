@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5f8c9f;
+    padding: 0 30px;
+    height: 70px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: block;
+}
+
+.nav-menu li a:hover {
+    background-color: #66a3be;
+    border-radius: 6px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5a8ca1;
+    list-style: none;
+    min-width: 180px;
+    display: none;
+}
+
+.dropdown-menu li a {
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.content {
+    color: #000000;
+    
+
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5f8c9f;
+    padding: 0 30px;
+    height: 70px;
+}
+
+.content{
+color: #5a8ca1;
+
+}
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto; 
+}
+
+
+
+
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #5f8899, #ffffff);
+  color: white;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 15px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: white;
+  color: #1e293b;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Facebook button */
+.fb-btn {
+  background-color: #1877f2;
+  color: white;
+}
+
+.fb-btn:hover {
+  background-color: #145dbf;
+}
+
+/* Zalo button */
+.zalo-btn {
+  background-color: #0068ff;
+  color: white;
+}
+
+.zalo-btn:hover {
+  background-color: #0052cc;
+}
+
+
+
+.footer {
+  background-color: #5f8f9f;
+  color: #ffffff;
+  padding: 40px 20px 10px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h3, 
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #5f8f9f;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+
+
+
+

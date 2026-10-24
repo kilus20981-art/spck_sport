@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web vợt cầu lông</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/cart.css">
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="logo">BADMINTON</div>
+
+      <ul class="nav-menu">
+        <li><a href="./index.html">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href=".">Sản phẩm</a>
+          <ul class="dropdown-menu">
+            <li><a href="./lining.html">Vợt Lining</a></li>
+            <li><a href="./phukien.html">Phụ kiện</a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./datsan.html">Đặt sân</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
+        <li><a href="./admin/admin.html">Admin</a></li>
+
+        <li id="loginMenu">
+        <a class="login" onclick="logout()">Đăng xuất</a>
+</li>
+        <li><a href="./profile.html">Tài khoản</a></li>
+        <li>
+    <a href="./cart.html" id="cartIcon">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    </a>
+</li>
+      </ul>
+    </nav>
+
+    
+
+    <div class="content">
+      <p>
+        Chào mừng bạn đến với cửa hàng cầu lông của chúng tôi – nơi cung cấp
+        dụng cụ cầu lông chính hãng và cho thuê sân đạt chuẩn. Không gian sạch
+        đẹp, ánh sáng tốt, giá hợp lý, phù hợp tập luyện, giao lưu và thi đấu.
+      </p>
+    </div>
+    <div class="container">
+      <img src="./image/grpht-thrttl_1759089897.webp" alt="" />
+    </div>
+
+
+      <div class="title-container">
+    <h1>Sản phẩm nổi bật</h1>
+</div>
+        <!-- DANH SÁCH SẢN PHẨM -->
+    <section class="products">
+     
+       
+    </section>
+
+
+    <section class="intro-features">
+      <div class="feature-box">
+        <div class="icon">🏸</div>
+        <h3>Chính hãng 100%</h3>
+        <p>Dụng cụ cầu lông từ các thương hiệu uy tín, đảm bảo chất lượng.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="icon">🏟️</div>
+        <h3>Sân đạt chuẩn</h3>
+        <p>Mặt sân êm, ánh sáng tốt, không gian rộng rãi.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="icon">💰</div>
+        <h3>Giá hợp lý</h3>
+        <p>Chi phí phù hợp cho tập luyện, giao lưu và thi đấu.</p>
+      </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3>Sân Cầu Lông ABC</h3>
+      <p>Chuyên cung cấp sân đạt chuẩn và dụng cụ cầu lông chính hãng.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Nguyễn Văn A, TP.HCM</p>
+      <p>📞 0909 123 456</p>
+      <p>✉️ abc@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Đặt sân</a></li>
+        <li><a href="#">Bảng giá</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Sân Cầu Lông ABC. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Firebase cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js" integrity="sha512-gCJuoyvPlJMaTPkYPfyfEt1KYPvoEE9PgGHlOU+Qtg+kLbBfEbiiim4PDj2ATWLc6BN0irZnNbdgzCtX53vjXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js" integrity="sha512-Xxpv+NpwNyir+77oEME5XeixRoRLrI4eY0bBZSMHgWLEFbc0f+JP4Nax3t/qDuYg1hgWrSl8pUapb+AO5Lp1jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-storage-compat.min.js" integrity="sha512-l/ieVoEShBQI9lKOdMY4AAV9rzEE5YHKF8XB4m3Qn3DtK9AhYSOgyDWrL2XH1lhKS4Fde+PNoDiBoT7UhcP23A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js" integrity="sha512-PgwIBKz/MWPvQvKq7MUWB5x5aCyiiXTnAtbUGqbBvylcD/oASXh8wap5g1lWpzPmNraLXWzuWx8bkZ+reKYoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/firebase.js"></script>
+
+    <script src="./js/index.js"></script> 
+
+<script src="./js/cart.js"></script>
+  </body>
+</html>

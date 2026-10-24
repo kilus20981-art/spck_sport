@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đặt sân xanh | BADMINTON</title>
+
+    <link rel="stylesheet" href="./css/sanxanh.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <nav class="navbar">
+        <div class="logo">BADMINTON</div>
+
+        <ul class="nav-menu">
+            <li><a href="./index.html">Trang chủ</a></li>
+
+            <li class="dropdown">
+                <a href="#">Sản phẩm ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./lining.html">Vợt Lining</a></li>
+                    <li><a href="./phukien.html">Phụ kiện</a></li>
+                    <li><a href="./yonex.html">Vợt Yonex</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+            <li><a href="./datsan.html">Đặt sân</a></li>
+            <li><a href="./lienhe.html">Liên hệ</a></li>
+
+            <li id="loginMenu">
+                <a href="./login.html">Đăng nhập</a>
+            </li>
+
+            <li><a href="./profile.html">Tài khoản</a></li>
+
+            <li>
+                <a href="./cart.html" id="cartIcon">
+                    🛒 Giỏ hàng (<span id="cart-count">0</span>)
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- TIÊU ĐỀ TRANG -->
+    <header class="page-heading">
+        <h1>Đặt sân cầu lông</h1>
+        <p>Trải nghiệm không gian thi đấu và luyện tập chuyên nghiệp.</p>
+    </header>
+
+    <!-- KHU VỰC ĐẶT SÂN -->
+    <main class="container">
+
+        <section class="court-card">
+            <h2>Sân xanh chuyên thi đấu</h2>
+
+            <img
+                src="./image/indoor-sports-hall-badminton-courts-260nw-2627859581.webp"
+                alt="Sân xanh chuyên thi đấu"
+            >
+
+            <p class="court-description">
+                Sân cầu lông trong nhà phù hợp cho luyện tập,
+                giao lưu và các trận đấu cùng bạn bè.
+            </p>
+
+            <form id="bookingForm">
+                <label for="bookingDate">Chọn ngày:</label>
+                <input
+                    type="date"
+                    id="bookingDate"
+                    name="bookingDate"
+                    required
+                >
+
+                <label for="bookingTime">Chọn giờ:</label>
+                <select id="bookingTime" name="bookingTime" required>
+                    <option value="7:00 - 8:00">7:00 - 8:00</option>
+                    <option value="8:00 - 9:00">8:00 - 9:00</option>
+                    <option value="9:00 - 10:00">9:00 - 10:00</option>
+                    <option value="17:00 - 18:00">17:00 - 18:00</option>
+                    <option value="18:00 - 19:00">18:00 - 19:00</option>
+                </select>
+
+                <button type="button" id="bookBtn">
+                    Xác nhận đặt sân
+                </button>
+            </form>
+
+            <p id="bookingMessage" role="status" aria-live="polite"></p>
+
+            <!-- DANH SÁCH LỊCH ĐÃ ĐẶT -->
+            <section class="booking-history">
+                <h3>Lịch sân xanh đã đặt</h3>
+                <div id="bookingList">
+                    Chưa có lịch đặt sân.
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>BADMINTON</h3>
+                <p>
+                    Không gian luyện tập cầu lông dành cho
+                    những người yêu thích bộ môn này.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <p>📍 123 Nguyễn Văn A, TP.HCM</p>
+                <p>📞 0909 123 456</p>
+                <p>✉️ abc@gmail.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./datsan.html">Đặt sân</a></li>
+                    <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+                    <li><a href="./lienhe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 BADMINTON. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+<!-- Firebase: phải tải trước file sử dụng Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- File cấu hình Firebase hiện có của dự án -->
+<script src="./js/firebase.js"></script>
+
+<!-- JavaScript giỏ hàng và đặt sân -->
+<script src="./js/cart.js"></script>
+<script src="./js/sanxanh.js"></script>
+
+
+</body>
+</html>

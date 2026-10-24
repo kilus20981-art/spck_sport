@@ -1,0 +1,1097 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7f8;
+    color: #4b4343;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    background: #000;
+
+    padding: 0 30px;
+
+    height: 70px;
+
+    position: relative;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #fff;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    margin-right: auto;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* MENU */
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    display: block;
+
+    font-size: 14px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HOVER MENU */
+
+.nav-menu li a:hover {
+    background: #252525;
+
+    border-radius: 8px;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    background: #7897a3 !important;
+
+    list-style: none;
+
+    min-width: 180px;
+
+    display: none;
+
+    border-radius: 0 0 10px 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu li a {
+    padding: 12px 16px;
+
+    transition: 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #333;
+
+    transform: translateX(5px);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+
+    animation: dropdownShow 0.25s ease;
+}
+
+
+/* Animation dropdown */
+
+@keyframes dropdownShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   NỀN TRANG TRÍ
+========================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 45%;
+
+    background: rgba(120, 151, 163, 0.12);
+
+    top: 80px;
+    left: -150px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 250px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background: rgba(120, 151, 163, 0.10);
+
+    bottom: -150px;
+    right: -100px;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 70px 20px 40px;
+
+    animation: contentShow 0.8s ease;
+}
+
+
+/* Animation */
+
+@keyframes contentShow {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+.content h1 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+    color: #000;
+}
+
+.content p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TITLE CONTAINER
+========================= */
+
+.title-container {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 50px 20px 30px;
+
+    color: #000;
+}
+
+.title-container h1 {
+    position: relative;
+}
+
+
+/* Đường gạch nhỏ dưới tiêu đề */
+
+.title-container h1::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 3px;
+
+    margin: 12px auto 0;
+
+    background: #7897a3;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   BANNER / ẢNH
+========================= */
+
+.container {
+    width: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow: hidden;
+
+    padding: 0 20px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+    display: block;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* Hover ảnh */
+
+.container img:hover {
+    transform: scale(1.02);
+
+    filter: brightness(1.05);
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.intro-features {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8eff2,
+            #f7f9fa
+        );
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   FEATURE BOX
+========================= */
+
+.feature-box {
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    padding: 30px 20px;
+
+    width: 300px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Hover */
+
+.feature-box:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ICON */
+
+.feature-box .icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+    display: inline-block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Icon hover */
+
+.feature-box:hover .icon {
+
+    transform:
+        translateY(-5px)
+        scale(1.1);
+}
+
+
+/* TITLE */
+
+.feature-box h3 {
+
+    color: #000;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+
+/* TEXT */
+
+.feature-box p {
+
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 60px 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.card {
+
+    background: #fff;
+
+    width: 300px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Hover card */
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* Zoom */
+
+.card:hover img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info {
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Label */
+
+.info label {
+
+    margin-top: 10px;
+
+    font-weight: 600;
+}
+
+
+/* Input */
+
+.info input {
+
+    padding: 10px;
+
+    margin-top: 5px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* Input focus */
+
+.info input:focus {
+
+    border-color: #7897a3;
+
+    box-shadow:
+        0 0 8px rgba(120, 151, 163, 0.25);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    margin-top: 15px;
+
+    padding: 11px 15px;
+
+    border: none;
+
+    background: #000;
+
+    color: white;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+button:hover {
+
+    background: #252525;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Click */
+
+button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   CARD LINK
+========================= */
+
+.card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card a:visited {
+    color: #000;
+}
+
+.card a:hover {
+    color: #000;
+}
+
+.product-link {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.add-cart {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+
+    width: min(420px, calc(100% - 32px));
+
+    margin: 28px auto 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #777;
+}
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #d5d5d5;
+}
+
+
+/* =========================
+   SOCIAL BUTTON
+========================= */
+
+.social-btn {
+
+    display: block;
+
+    width: min(420px, calc(100% - 32px));
+
+    height: 48px;
+
+    margin: 12px auto;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* GOOGLE */
+
+.google-btn {
+
+    background: white;
+
+    color: #333;
+
+    border: 1px solid #ccc;
+}
+
+.google-btn::before {
+
+    content: "G";
+
+    color: #4285f4;
+
+    font-size: 20px;
+
+    margin-right: 10px;
+}
+
+
+/* FACEBOOK */
+
+.facebook-btn {
+
+    background: #1877f2;
+
+    color: white;
+
+    border: none;
+}
+
+.facebook-btn::before {
+
+    content: "f";
+
+    background: white;
+
+    color: #1877f2;
+
+    border-radius: 50%;
+
+    padding: 1px 7px;
+
+    margin-right: 10px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    background: #7897a3;
+
+    color: #fff;
+
+    padding: 45px 20px 10px;
+
+    margin-top: 30px;
+}
+
+
+/* Footer container */
+
+.footer-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+
+/* Footer column */
+
+.footer-col {
+
+    flex: 1;
+
+    min-width: 250px;
+}
+
+
+/* Footer title */
+
+.footer h3,
+.footer h4 {
+
+    margin-bottom: 15px;
+}
+
+
+/* Footer text */
+
+.footer p {
+
+    margin: 8px 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #ddd;
+}
+
+
+/* Footer list */
+
+.footer ul {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.footer ul li {
+
+    margin-bottom: 8px;
+}
+
+
+/* Footer link */
+
+.footer ul li a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+.footer ul li a:hover {
+
+    color: #9db8c2;
+
+    padding-left: 5px;
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    font-size: 13px;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 10px 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .logo {
+
+        width: 100%;
+
+        text-align: center;
+
+        margin-bottom: 8px;
+    }
+
+
+    .nav-menu {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-menu li a {
+
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* Dropdown */
+
+    .dropdown-menu {
+
+        min-width: 150px;
+    }
+
+
+    /* Content */
+
+    .content {
+
+        padding: 50px 20px 30px;
+    }
+
+
+    .content h1 {
+
+        font-size: 30px;
+    }
+
+
+    .content p {
+
+        font-size: 16px;
+    }
+
+
+    /* Banner */
+
+    .container {
+
+        flex-direction: column;
+
+        padding: 0 15px;
+    }
+
+
+    .container img {
+
+        width: 100%;
+
+        height: 250px;
+    }
+
+
+    /* Features */
+
+    .intro-features {
+
+        padding: 40px 20px;
+
+        gap: 20px;
+    }
+
+
+    .feature-box {
+
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Products */
+
+    .products {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 40px 20px;
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================
+   ĐIỆN THOẠI NHỎ
+========================= */
+
+@media (max-width: 480px) {
+
+    .nav-menu li a {
+
+        padding: 7px 6px;
+
+        font-size: 12px;
+    }
+
+
+    .content h1 {
+
+        font-size: 26px;
+    }
+
+
+    .container img {
+
+        height: 220px;
+    }
+
+
+    .card img {
+
+        height: 260px;
+    }
+
+}

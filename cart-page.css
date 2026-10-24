@@ -1,0 +1,18 @@
+/* ==========================
+      THANH TOÁN
+========================== */
+
+#checkout-btn{
+    background:#5f8c9f;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#checkout-btn:hover{
+    background:#3d6f82;
+}

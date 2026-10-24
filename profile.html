@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile</title>
+<link rel="stylesheet" href="./css/profile.css">
+<link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+
+<!--Navbar-->
+    <nav class="navbar">
+      <div class="logo">BADMINTON</div>
+
+      <ul class="nav-menu">
+        <li><a href="./index.html">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href=".">Sản phẩm</a>
+          <ul class="dropdown-menu">
+            <li><a href="./lining.html">Vợt Lining</a></li>
+            <li><a href="./phukien.html">Phụ kiện</a></li>
+      
+          </ul>
+        </li>
+
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./datsan.html">Đặt sân</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
+        <li id="loginMenu">
+    <a class="login" onclick="logout()">Đăng xuất</a>
+</li>
+        <li><a href="./profile.html">Tài khoản</a></li>
+        <li>
+    <a href="./cart.html" id="cartIcon">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    </a>
+</li>
+      </ul>
+    </nav>
+
+
+
+<!-- PROFILE HEADER -->
+<section class="profile-header">
+
+<img src="./image/anh-dai-dien-buon-21-30-10-00-40.jpg" class="avatar">
+
+<div class="profile-info">
+
+<h1 id="username"></h1>
+
+<div class="stats">
+
+<div>
+<h3>120</h3>
+<p>like</p>
+</div>
+
+<div>
+<h3>80</h3>
+<p>Favorite</p>
+</div>
+
+
+
+<div>
+<h3>6</h3>
+<p>Liked</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACCOUNT -->
+<div class="profile-panel">
+  <div class="account-box">
+    <h2>Thông tin tài khoản</h2>
+
+    <div class="profile-role-wrap">
+      <span class="role-badge" id="roleBadge">Customer</span>
+    </div>
+
+  <label>Username</label>
+<input type="text" id="input-username">
+<label>Email</label>
+<input type="email" id="input-email">
+<button id="btn-save-profile">Lưu thay đổi</button>
+
+    <div class="logout">
+        <a href="#" onclick="logout()">Đăng xuất</a>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3>Sân Cầu Lông ABC</h3>
+      <p>Chuyên cung cấp sân đạt chuẩn và dụng cụ cầu lông chính hãng.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Nguyễn Văn A, TP.HCM</p>
+      <p>📞 0909 123 456</p>
+      <p>✉️ abc@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Đặt sân</a></li>
+        <li><a href="#">Bảng giá</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Sân Cầu Lông ABC. All rights reserved.</p>
+  </div>
+</footer>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js"></script>
+
+
+
+<script src="./js/firebase.js"></script>
+<script src="./js/profile.js"></script>
+
+</body>
+</html>
